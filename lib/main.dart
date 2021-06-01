@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'ui/views/cartpage.dart';
 import 'ui/views/homepage.dart';
+import 'core/Providers/cartProvider.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,14 +13,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      initialRoute: '/home',
-      routes: {
-        '/home': (context) => HomePage(),
-        '/cart': (context) => CartPage(),
-      },
-      // home: HomePage(),
+    return ChangeNotifierProvider(
+      create: (BuildContext context) => CartProvider(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        initialRoute: '/home',
+        routes: {
+          '/home': (context) => HomePage(),
+          '/cart': (context) => CartPage(),
+        },
+        // home: HomePage(),
+      ),
     );
   }
 }

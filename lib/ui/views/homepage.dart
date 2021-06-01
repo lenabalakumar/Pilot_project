@@ -18,20 +18,6 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.white12,
-        // leading: MaterialButton(
-        //   child: Icon(
-        //     Icons.person,
-        //     size: 30.0,
-        //   ),
-        //   onPressed: () {},
-        // ),
-        // title: Center(
-        //   child: Icon(
-        //     Icons.celebration,
-        //     color: Colors.amber,
-        //     size: 30.0,
-        //   ),
-        // ),
         actions: <Widget>[
           MaterialButton(
             child: Icon(
